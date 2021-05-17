@@ -105,7 +105,6 @@ const draw_robots = (ctx, coords, width, height, scale) => {
   ctx.translate(width / 2, height / 2);
   ctx.scale(scale, -scale);
 
-  console.log(coords);
   for (let i = 0; i < 3; i++) {
     draw_single_robot(ctx, coords.yellow[i].x, coords.yellow[i].y, coords.yellow[i].theta, robot_size, yellow_light, yellow_dark, line_width);
   }
@@ -129,4 +128,8 @@ const draw_robots = (ctx, coords, width, height, scale) => {
   ctx.restore();
 }
 
-export { draw_field, draw_single_robot, draw_robots };
+const transform_pixel_meter = (x, y, width, height, scale) => {
+  return { x: (x - (width / 2)) / scale, y: -(y - (height / 2)) / scale };
+}
+
+export { draw_field, draw_single_robot, draw_robots, transform_pixel_meter };
