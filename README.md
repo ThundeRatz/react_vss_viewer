@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# React VSS viewer
+
+Simple react app to display a Very Small Soccer (VSS) match.
+
+Under the hook, the app uses [redux toolkit](https://redux-toolkit.js.org/) to manage state updates
+
+![campo](./docs/campo_vss.png)
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
